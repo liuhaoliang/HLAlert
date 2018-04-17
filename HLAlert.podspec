@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HLAlert"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "An easy way to use UIAlertView and UIActionSheet."
 
   # This description is used to generate tags and improve search results.
