@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HLAlert: NSObject {
+public class HLAlert: NSObject {
     
     @objc public static let actionStyleDefault = "default";
     @objc public static let actionStyleCancel = "cancel";
