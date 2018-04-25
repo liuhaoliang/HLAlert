@@ -1,6 +1,8 @@
 # Introduction
 An easy way to use AlertView and ActionSheet in your Object-C or Swift project,this library are based on UIAlertViewController. 
 
+![demo.gif](https://raw.githubusercontent.com/liuhaoliang/HLAlert/master/demo.gif)]
+
 # Usage:
 1. add the repo in your podfile
 2. use pod 'HLAlert' or drag the library into your project folder
