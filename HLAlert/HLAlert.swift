@@ -51,7 +51,26 @@ public class HLAlert: NSObject {
             })
             alertViewController.addAction(action);
         }
-        UIApplication.shared.keyWindow?.rootViewController?.present(alertViewController, animated: true, completion: nil)
+        topViewController?.present(alertViewController, animated: true, completion: nil)
+    }
+    
+    static var topViewController: UIViewController? {
+        var resultVC: UIViewController?
+        resultVC = _topViewController(UIApplication.shared.keyWindow?.rootViewController)
+        while let presentedViewController = resultVC?.presentedViewController {
+            resultVC = _topViewController(presentedViewController)
+        }
+        return resultVC
+    }
+    
+    private static func _topViewController(_ vc: UIViewController?) -> UIViewController? {
+        if (vc is UINavigationController) {
+            return _topViewController((vc as? UINavigationController)?.topViewController)
+        } else if (vc is UITabBarController) {
+            return _topViewController((vc as? UITabBarController)?.selectedViewController)
+        } else {
+            return vc
+        }
     }
 }
 
